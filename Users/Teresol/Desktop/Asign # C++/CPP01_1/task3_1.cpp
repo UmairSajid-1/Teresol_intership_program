@@ -1,4 +1,12 @@
-#include <iostream>
+/******************************************************************
+*                                                                 *
+*                Name: Umair Sajid                                *
+*                Date: 24-07-2024                                 *
+*                Description: This program prints the size        *
+*                (in bytes) of different fundamental data types   *
+*                                                                 *
+******************************************************************/
+include <iostream>
 using namespace std;
 int main()
 {

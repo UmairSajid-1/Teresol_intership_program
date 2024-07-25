@@ -1,3 +1,10 @@
+/******************************************************************
+*                                                                 *
+*                Name: Umair Sajid                                *
+*                Date: 25-07-2024                                 *
+*                Description: Find Largest Number From An Array   *
+*                                                                 *
+******************************************************************/
 #include <iostream>
 using namespace std;
 int main() 

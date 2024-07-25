@@ -1,3 +1,11 @@
+/******************************************************************
+*                                                                 *
+*                Name: Umair Sajid                                *
+*                Date: 25-07-2024                                 *
+*                Description: User Enter Number And Print         *
+*                Table of that Number                             *
+*                                                                 *
+******************************************************************/
 #include <iostream>
 using namespace std;
 int main()

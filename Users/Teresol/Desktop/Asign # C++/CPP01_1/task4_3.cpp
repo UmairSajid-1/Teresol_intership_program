@@ -1,3 +1,11 @@
+/******************************************************************
+*                                                                 *
+*                Name: Umair Sajid                                *
+*                Date: 25-07-2024                                 *
+*                Description: This program Find                   *
+*                Most frequent element From an Array              *
+*                                                                 *
+******************************************************************/
 #include <iostream>
 using namespace std;
 
