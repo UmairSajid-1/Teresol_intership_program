@@ -1,7 +1,7 @@
 /******************************************************************
 *                                                                 *
 *                Name: Umair Sajid                                *
-*                Date: 25-07-2024                                 *
+*                Date: 24-07-2024                                 *
 *                Description: This program Find Average of an     *
 *                Array                                            *
 *                                                                 *

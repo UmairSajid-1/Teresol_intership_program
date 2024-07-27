@@ -1,7 +1,7 @@
 /******************************************************************
 *                                                                 *
 *                Name: Umair Sajid                                *
-*                Date: 25-07-2024                                 *
+*                Date: 24-07-2024                                 *
 *                Description: User Enter Number And Print         *
 *                Table of that Number                             *
 *                                                                 *

@@ -6,7 +6,7 @@
 *                (in bytes) of different fundamental data types   *
 *                                                                 *
 ******************************************************************/
-include <iostream>
+#include <iostream>
 using namespace std;
 int main()
 {

@@ -1,63 +1,76 @@
 /********************************************************************
 *                                                                   *
 *                Name: Umair Sajid                                  *
-*                Date: 26-07-2024                                   *
-*                Description:Print matrix elements in spiral order  *
+*                Date: 27-07-2024                                   *
+*                Description: Square matrix, the task is to rotate  *
+*                its elements clockwise by one step                 *
 *                                                                   *
+*********************************************************************
+* I certify that I have neither given nor received unauthorized aid *
+* on this Assignment.                                               *
 ********************************************************************/
+
 #include <iostream>
 using namespace std;
-int main() 
-{
-    const int size = 3;
-    int data[size][size] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
-    cout << "Matrix Before Spiral Order: " << endl;
-    for (int row = 0; row < size; row++) 
-    {
-        for (int col = 0; col < size; col++) 
-        {
-            cout << data[row][col] << " ";
+int main() {
+    int size;
+
+    cout << "Enter the size of the matrix: ";
+    cin >> size;
+
+    int matrix[size][size];
+
+    cout << "Enter the elements of the " << size << "x" << size << " matrix:" << endl;
+    for (int row = 0; row < size; row++) {
+        for (int col = 0; col < size; col++) {
+            cout << "Element [" << row << "][" << col << "]: ";
+            cin >> matrix[row][col];
+        }
+    }
+
+    cout << "Matrix Before Rotation: " << endl;
+    for (int row = 0; row < size; row++) {
+        for (int col = 0; col < size; col++) {
+            cout << matrix[row][col] << " ";
         }
         cout << endl;
     }
-    
-    cout << "Matrix After Spiral Order: " << endl;
 
+    // Perform the rotation
     int top = 0, bottom = size - 1;
     int left = 0, right = size - 1;
+    int prev = matrix[top][left];
 
-    while (top <= bottom && left <= right) 
-    {
-        // Traverse from left to right
-        for (int col = left; col <= right; col++) 
-        {
-            cout << data[top][col] << " ";
+    // Move elements of the top row one step right
+    for (int i = left; i < right; ++i) {
+        swap(prev, matrix[top][i + 1]);
+    }
+
+    // Move elements of the right column one step down
+    for (int i = top; i < bottom; ++i) {
+        swap(prev, matrix[i + 1][right]);
+    }
+
+    // Move elements of the bottom row one step left
+    for (int i = right; i > left; --i) {
+        swap(prev, matrix[bottom][i - 1]);
+    }
+
+    // Move elements of the left column one step up
+    for (int i = bottom; i > top; --i) {
+        swap(prev, matrix[i - 1][left]);
+    }
+
+    matrix[top + 1][left] = prev;
+
+    cout << "Matrix After Rotation: " << endl;
+    for (int row = 0; row < size; row++) {
+        for (int col = 0; col < size; col++) {
+            cout << matrix[row][col] << " ";
         }
-        top++;
-        // Traverse downwards
-        for (int row = top; row <= bottom; row++) 
-        {
-            cout << data[row][right] << " ";
-        }
-        right--;
-        // Traverse from right to left
-        if (top <= bottom) 
-        {
-            for (int col = right; col >= left; col--) 
-            {
-                cout << data[bottom][col] << " ";
-            }
-            bottom--;
-        }
-        // Traverse upwards
-        if (left <= right) {
-            for (int row = bottom; row >= top; row--) {
-                cout << data[row][left] << " ";
-            }
-            left++;
-        }
-    }  
-    cout << endl;
+        cout << endl;
+    }
+
     return 0;
 }

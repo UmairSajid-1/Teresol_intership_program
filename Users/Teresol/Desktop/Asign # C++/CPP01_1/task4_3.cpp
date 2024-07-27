@@ -1,7 +1,7 @@
 /******************************************************************
 *                                                                 *
 *                Name: Umair Sajid                                *
-*                Date: 25-07-2024                                 *
+*                Date: 24-07-2024                                 *
 *                Description: This program Find                   *
 *                Most frequent element From an Array              *
 *                                                                 *
@@ -38,7 +38,7 @@ int main()
         }
     }
 
-    cout << "Most frequent element is: " << mostFrequent << endl;
+    cout << "Most frequent element is " << mostFrequent << " and it is " << maxCount << " times " << endl;
 
     return 0;
 }
